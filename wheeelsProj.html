@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <title>Yasemin Gunal Wheeels Project</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="thumbnail.png">
+    <!-- Created by Yasemin Gunal 3/19/2026 -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    
+    <style>
+    
+      * {box-sizing: border-box;}
+      
+      body { 
+        background-color: #322C4D;
+        text-align: center;
+        margin: 10px 8px 0 8px;
+      }
+      
+      h1 {
+        font-family: Koho; 
+        color: #65FFDB;
+        font-size: 90px;
+        margin-top: 60px;
+      }
+        
+      h2 {
+        font-family: Koho; 
+        color: #CC2F5C;
+        font-size: 65px;
+      }
+      
+      h3 {
+        font-family: Koho; 
+        color: #65FFDB;
+        font-size: 45px;
+      }
+      
+      
+      p { 
+        font-family: Krub;
+        color: #65FFDB;
+        font-size: 25px;
+        max-width: 60%;
+        margin: 20px auto;
+      }
+      
+      li {
+        text-align: left;
+        font-family: Krub;
+        color: #65FFDB;
+        font-size: 25px;
+/*         list-style-type: circle; */
+/*         margin-left: 50px; */
+      }
+      
+      a {
+        color: #65FFDB;
+        font-family: Krub;
+      }
+      
+      
+      /* HEADER STUFF! */
+        
+      #header {
+        background-color: #65FFDB;
+        height: 80px;
+        width: 100%; 
+        position: sticky;
+        top: 0px;
+        white-space: nowrap; 
+        z-index: 1000; /* adjusts layer order */
+      }
+  
+      #header li {
+        font-family: KoHo;
+        font-size: 40px;
+        color: #282342;
+        list-style: none;
+        display: inline; 
+        margin: 0 50px 0 0px;
+        position: relative;
+        /*border: 1px solid red;*/
+        top: 10px;
+        cursor: pointer;
+      }
+      
+      #header a:hover {
+          color: #CC2F5C;
+      }
+      
+      #header a {
+        color: #282342;
+        text-decoration: none;
+        font-family: Koho; 
+      }
+      
+      /* HEADER STUFF END */
+      
+      /* MAIN CONTENT */
+      
+      #issuesGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: 30px;
+        margin: 0px 10%;
+      } 
+      
+      .issuesContent img {
+        width: 600px;
+        cursor: pointer;
+      }
+      
+      .issuesContent p {
+        width: 600px;
+      }
+      
+       #assetsGrid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        column-gap: 90px;
+        margin: 0px 10%;
+      } 
+      
+      .assetsContent img {
+        width: 200px;
+      }
+      
+      #assetsGrid2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        column-gap: 90px;
+        margin: 0px 10%;
+      } 
+      
+      .assetsContent2 img {
+        width: 400px;
+      }
+      
+      /* MAIN CONTENT */
+      
+  
+      
+      /* footer */
+      
+      #attributes a {
+        color: #65FFDB;
+        font-size: 12px;
+      }
+      
+      #attributes {
+          margin-top: 30px;
+      }
+      
+      #footer h2 {
+         margin: 0 auto;
+      }
+      
+      #footer {
+        margin-top: 50px;
+      }
+      
+      #contacts li {
+         list-style: none;
+         display: inline;
+         margin: 0 auto;
+         padding: 0 30px 0 0px;
+      }
+      
+      #contacts a {
+        text-decoration: none;
+      
+      }
+      /* footer */
+      /* dropdown shtuff */ 
+      
+           
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        z-index: 1001; 
+        top: 50px;
+        
+        left: 50%;
+        transform: translateX(-50%);
+
+        padding-bottom: 25px;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+      
+        background-color: #65FFDB;
+        white-space: nowrap; 
+        list-style: none;
+      }
+   
+
+      .dropdown-menu li {
+        margin: 0;
+        padding: 0px 0px 0px 0px;  
+        color: #282342;
+      }
+
+
+      .dropdown-menu a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 35px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+       display: flex;
+      }
+
+      
+    /* dropdown shtuff */
+      
+      #avatar{
+        position: fixed; 
+        bottom: 0px;        
+        right: 0px;           
+        z-index: 1000;
+        cursor: pointer;
+        
+      }
+    
+    </style>
+    
+      
+  </head>
+  <body>
+    
+    
+  <div id="header">
+      <ul>
+        <b>
+        <li id="hometxt"><a href="homePage.html">HOME</a></li>
+        <li id="aboutmetxt"><a href="aboutMePage.html">ABOUT ME</a></li>
+        <li id="worktxt" class="dropdown">
+          <a href="workPage.html" style="color:#CC2F5C;">WORK</a>
+          <ul class="dropdown-menu">
+            <li ><a href="workPage.html#digitalEnter">DIGITAL</a></li>
+            <li ><a href="workPage.html#tradEnter">TRADITIONAL</a></li>
+            <li ><a href="workPage.html#paidEnter">PAID WORK</a></li>
+            <li ><a href="workPage.html#projectEnter">PROJECTS</a></li>
+          </ul>
+          </li>
+          <li id="resumetxt"><a href="resumePage.html">RESUME</a></li>
+        </b>
+      </ul>
+     </div>
+    
+    <img src="researchAva.png" id="avatar" width="150px" alt="cartoon drawing of 'Yasemin Gunal' commenting on their profile"> <!--I wanted to specify what each image was saying but due to the way i made this, no matter what image shows it will deliver the same alt tag -->
+    
+    <div id="mainContent">
+      
+        <h1 id="wheeelsTxt" style="cursor:pointer;">
+          "WHEEELS" APP PROJECT
+        </h1>
+      
+      <h2>
+        THE PROBLEM
+      </h2>
+      <p>
+        The school's bus program was messy and disorganized. It was our job to identify the specific pain points and come up with a solution.
+      </p>
+      
+      <h2>
+        IDENTIFYING ISSUES
+      </h2>
+      
+      <p>
+          My team and I had each interveiwed 3 relevant parties about their expirience with the bus system. We then compiled our findings into more digestible bullet points to be categorized. 
+      </p>
+      
+      <div id="issuesGrid">
+      
+      <div class="issuesContent">
+        <img src="myBusNotes.png" alt="placeholder">
+      </div> 
+        
+      <div class="issuesContent">
+        <img src="allBusNotes.png" alt="placeholder">
+         <p>
+         This allowed us to regroup and combine our findings into one large collection of data. 
+        </p>
+      </div>  
+      </div>
+      
+      <h2>
+        HOW MIGHT WE?
+      </h2>
+      
+      <p>
+        Now that we had our data, we could manage it into clearer groups and points. Using "How might we" statements, we settled on the issues we wanted to tackle. 
+      </p>
+      
+      <img src="topicVote.png" alt="placeholder" style="width: 70%">
+      
+      <p>
+        Using these statements allowed us to then brainstorm multiple solutions.   
+      </p>
+      
+       <img src="brainstorm.png" id="brainstormImg" alt="placeholder" style="width: 70%; cursor:pointer;">
+      
+      <h2>
+        SOLUTION
+      </h2>
+      
+      <p>
+        In the end, my team and I had settled on the idea to produce an app that would streamline information regarding the bus. 
+        <br><br>
+        This would open up many possibilities for the bus system were it implemented. The app would display the location, timing, and current bus status, along with keep track of the amount of people using the bus that day.
+        The point of the app is that it would be beneficial for both the user and managing the bus system.
+        <br><br>
+        We named our app "Wheeels".
+      </p>
+      
+       <img src="finalFigma.png" alt="placeholder" style="width: 70%">
+      <p>
+        Together, we created a high-fidelity <a href="https://www.figma.com/proto/mLqfzfBadghpxHvv7gWMqw/Yasemin-Gunal-Portfolio-Mock-up?node-id=1-2&p=f&t=MijMfaeyxwrJqJbn-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank">mock-up in Figma</a>.
+        <br><br>
+        My role was main asset designer as well as figma supporter. I illustrated most of the assets, along with made contributions to the functionality of the Figma mock-up.
+      </p>
+       
+      <div id="assetsGrid">
+        <div class="assetsContent">
+           <img src="wheeelsLogoWip1.png" alt="placeholder">
+        </div>
+        <div class="assetsContent">
+           <img src="wheeelsLogoWip2.png" alt="placeholder">
+        </div>
+        <div class="assetsContent">
+           <img src="wheeelslogo.png" alt="placeholder">
+        </div>
+      </div>
+      
+      <div id="assetsGrid2">
+        <div class="assetsContent2">
+           <img src="busHere.png" alt="placeholder">
+        </div>
+        <div class="assetsContent2">
+         <img src="busLeft.png" alt="placeholder">
+      </div>
+      </div>
+    
+    <div id="footer">
+      <h2>
+        CONTACT ME!
+      </h2>
+      
+      <ul id="contacts">
+        <li> <a href="mailto:yasemin.e.gunal@gmail.com" target="_blank"> <img src="gmail.png" width="50px" alt="gmail icon"></a></li>
+        <li> <a href="https://wa.me/15195895380" target="_blank"> <img src="mobile.png" width="50px" alt="mobile phone icon"> </a> </li>
+        <li> <a href="https://www.linkedin.com/in/yasemin-gunal-9b0470304/" target="_blank"> <img src="linkedin.png" width="50px" alt="linkedin icon"> </a> </li> 
+      </ul>
+     
+       <div id="attributes">
+       <a href="https://www.flaticon.com/free-icons/telephone" target="_blank" title="telephone icons">Telephone icons created by Ricardo Ruiz - Flaticon</a> 
+       <a href="https://www.flaticon.com/free-icons/linkedin" target="_blank" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+       <a href="https://www.flaticon.com/free-icons/email" target="_blank" title="email icons">Email icons created by Pixel perfect - Flaticon</a>
+      </div> 
+    </div>
+    </div>
+   
+    
+    
+  </body>
+  
+  
+  <script>
+  // get the avatar image
+  const avatarImg = document.getElementById('avatar');
+  let avatarVisible = 1;
+    
+  document.addEventListener("keydown", function(event) {  // hide ava when clicking h
+
+    if (event.key === "h" || event.key === "H") {
+      avatarVisible = 1 - avatarVisible;
+      avatarImg.style.opacity = avatarVisible;
+      
+      if (avatarVisible === 1) {
+        avatarImg.style.pointerEvents = "auto";
+      } else {
+        avatarImg.style.pointerEvents = "none";
+      }
+      }
+  });
+
+  // assign click events
+
+    
+  document.getElementById('wheeelsTxt').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'researchAva.png';
+  });
+    
+   document.getElementById('brainstormImg').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'bestIdeasAva.png';
+  });
+  
+  document.getElementById('avatar').addEventListener('click', (e) => {
+  e.stopPropagation();  
+  avatarImg.src = 'hideAva.png';
+  });
+    
+  document.querySelectorAll('.issuesContent').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avatarImg.src = 'insightAva.png';
+    });
+  });
+ 
+ 
+</script>
+  
+</html>
