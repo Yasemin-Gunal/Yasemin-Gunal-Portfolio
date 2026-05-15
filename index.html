@@ -124,6 +124,11 @@
         opacity: 1;
         transform: translateY(0);
       }
+      
+      .starImg:nth-child(1) {
+/*         transition-delay: 2s; */
+        transition: 1.7s 0.2s ease;
+      }
 
       
       #whoGrid{
@@ -156,7 +161,7 @@
       
             
       #footer {
-         margin-top: 50px;
+         margin-top: 90px;
       }
       
       #contacts li {
@@ -276,9 +281,10 @@
     
     
     <div id="whoGrid">
-       
+      
+      <div class="starImg"> 
           <img src="palStar.PNG" class="whoContent" alt="star coloured like the Palestinian flag.">
-
+      </div>
 
 
          <div class="whoContent">
@@ -291,9 +297,9 @@
           </p>
         </div>
       
-         
+         <div class="starImg">
           <img src="turkStar.PNG" class="whoContent" alt="star coloured like the Turkish flag">
-      
+       </div>
     </div>
   
     
@@ -473,17 +479,22 @@
     const pngStars = document.querySelectorAll('.starImg');
 
     const observer = new IntersectionObserver((entries) => {
+
       entries.forEach(entry => {
 
+        // only trigger when 50% visible
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+          entry.target.classList.add("show");
         }
 
       });
+
+    }, {
+      threshold: 0.5
     });
 
-    pngStars.forEach(star => {
-      observer.observe(star);
+    pngStars.forEach(img => {
+      observer.observe(img);
     });
 
 </script>
