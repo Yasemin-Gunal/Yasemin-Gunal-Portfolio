@@ -43,7 +43,12 @@
         font-family: Krub;
         color: #65FFDB;
         font-size: 25px;
-/*         width: 50%;  */
+      }
+      
+      a { 
+        font-family: Krub;
+        color: #65FFDB;
+        font-size: 25px;
       }
       /* general styling END */
       
@@ -108,8 +113,16 @@
         justify-content: center;
       }
       
-      .whatWhereImg {
+      .starImg {
         width: 400px;
+        opacity: 0;
+        transform: translateY(-70px);
+        transition: all 1.5s ease;
+           }
+
+      .starImg.show {
+        opacity: 1;
+        transform: translateY(0);
       }
 
       
@@ -297,10 +310,10 @@
   
 
       
-      <img src="uwStar.png"  class="whatWhereImg"  alt="star coloured like the logo for Univerisy of Waterloo">
+      <img src="uwStar.png"  class="starImg"  alt="star coloured like the logo for Univerisy of Waterloo">
 
         
-      <img src="canadaStar.png"  class="whatWhereImg" alt="star coloured like the Canadian flag">
+      <img src="canadaStar.png"  class="starImg" alt="star coloured like the Canadian flag">
       
       
 
@@ -315,9 +328,16 @@
       
     </div>
     
-      <h1 id="why">
+<!--       <h1 id="why">
           <a href="aboutMePage.html">WHY?</a>
-        </h1>
+        </h1> -->
+    
+    <h2>
+      WHY?
+    </h2>
+    <p>
+      <a href="aboutMePage.html">Take a peek inside "about me"!</a>
+    </p>
     
     <div id="footer">
       <h2>
@@ -375,6 +395,7 @@
   e.stopPropagation();  
   avatarImg.src = 'hideAva.png';
   });
+    
   
   //HEADER STARS
 
@@ -446,7 +467,24 @@
       requestAnimationFrame(draw);
     }
     draw();
+    
+   // stars transition
+    
+    const pngStars = document.querySelectorAll('.starImg');
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+
+      });
+    });
+
+    pngStars.forEach(star => {
+      observer.observe(star);
+    });
 
 </script>
   
