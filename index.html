@@ -27,7 +27,7 @@
         font-family: Koho; 
         color: #CC2F5C;
         font-size: 65px;
-        width: 50%;
+/*         width: 50%; */
       }
       
       
@@ -43,7 +43,7 @@
         font-family: Krub;
         color: #65FFDB;
         font-size: 25px;
-        width: 50%; 
+/*         width: 50%;  */
       }
       /* general styling END */
       
@@ -92,27 +92,35 @@
       /* MAIN CONTENT */
       
 
-      #mainContent {
+      #whatWhereGrid {
         display: grid;
-        grid-template-columns: 50% 50%; 
-        margin: 500px auto 100px auto;
+        grid-template-columns: auto auto; 
+        margin: 0px auto 100px auto;
         width: 100%;
         max-width: 1000px;
       }
       
       
-      .gallery {
-        width: 600px;
+      .whatWhereContent {
+        width: 100%;
         padding-right: 60px;
         justify-content: center;
       }
+
       
-      
-      .content-txt {
-        width: 1000;
-        align-items: center;
+      #whoGrid{
+        display: grid;
+        grid-template-columns: auto auto auto; 
+        margin: 500px auto 100px auto;
         justify-content: center;
-        justify-items: start;
+        width: 100%;
+         max-width: 1000px;
+      }
+      
+      .whoContent {
+        margin: auto auto;
+        width: 100%; 
+        justify-content: center;
       }
       
       
@@ -248,28 +256,34 @@
       Let design tell our next story 
     </p>
     
-  
     
-    <div id="mainContent">
-     
-        <div class="content">   
-          <img src="meStar.png" class="gallery" alt="2 stars, one coloured with the Turkish flag, the other with the Palestinian flag. Each star has a drawing of 'Yasemin's' avatar beside it. ">
-        </div>
+    <div id="whoGrid">
+       
+          <img src="palStar.PNG" class="whoContent" alt="star coloured like the Palestinian flag.">
 
 
-         <div class="content-txt">
+
+         <div class="whoContent">
           <h2>
             WHO?
           </h2>
-          <p>
+          <p class="content-txt">
             Yo! <br> I'm Yasemin Emira Gunal. <br><br>I'm
             20 years old and use she/her pronouns.<br><br> I come from a Turkish and Palestinian background. 
-            
           </p>
         </div>
-   
       
-       <div class="content-txt">
+         
+          <img src="turkStar.PNG" class="whoContent" alt="star coloured like the Turkish flag">
+      
+    </div>
+  
+    
+    <div id="whatWhereGrid">
+     
+
+      
+       <div class="whatWhereContent">
         <h2>
           WHAT?
         </h2>
@@ -280,16 +294,14 @@
   
 
       
-      <div class="content">   
-      <img src="uwStar.png"  class="gallery"  alt="star coloured like the logo for Univerisy of Waterloo">
-      </div>
+      <img src="uwStar.png"  class="whatWhereContent"  alt="star coloured like the logo for Univerisy of Waterloo">
+
+        
+      <img src="canadaStar.png"  class="whatWhereContent" alt="star coloured like the Canadian flag">
       
-       <div class="content">   
-      <img src="canadaStar.png"  class="gallery" alt="star coloured like the Canadian flag">
-      </div>
       
 
-      <div class="content-txt"> 
+      <div class="whatWhereContent"> 
         <h2>
           WHERE?
         </h2>
